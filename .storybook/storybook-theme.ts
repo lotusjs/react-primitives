@@ -2,5 +2,5 @@ import { create } from '@storybook/theming';
 
 export default create({
   base: 'light',
-  brandTitle: 'Sensoro Design',
+  brandTitle: 'React Primitives',
 });

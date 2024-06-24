@@ -117,6 +117,7 @@
     "rollup-plugin-esbuild": "^6.1.1",
     "rollup-plugin-preserve-directives": "^0.4.0",
     "storybook": "^8.1.10",
+    "tailwindcss": "^3.4.4",
     "taze": "^0.13.8",
     "tsx": "^4.15.2",
     "typescript": "^5.4.5",
