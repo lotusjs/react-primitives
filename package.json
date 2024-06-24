@@ -120,7 +120,6 @@
     "tsx": "^4.15.2",
     "typescript": "^5.4.5",
     "vite": "^5.2.0",
-    "vite-plugin-style-import": "^2.0.0",
     "vitest": "^1.6.0",
     "walrus": "workspace:*",
     "zx": "^8.1.2"
