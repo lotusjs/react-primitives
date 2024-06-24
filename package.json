@@ -1,0 +1,139 @@
+{
+  "name": "@lotus-design/react-primitives",
+  "version": "0.0.2-alpha.3",
+  "packageManager": "pnpm@8.15.8",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lotusjs/react-primitives.git"
+  },
+  "sideEffects": false,
+  "files": [
+    "README.md",
+    "es",
+    "lib"
+  ],
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "scripts": {
+    "bootstrap": "pnpm install",
+    "start": "storybook dev -p 6006",
+    "build:docs": "storybook build",
+    "build": "walrus build",
+    "test": "vitest",
+    "test:cov": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint --cache .",
+    "lint:fix": "nr lint --fix",
+    "prepare": "husky || true",
+    "reinstall": "rimraf pnpm-lock.yaml && rimraf package.lock.json && rimraf node_modules && npm run bootstrap",
+    "preinstall": "npx only-allow pnpm",
+    "major": "taze minor -wIr"
+  },
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@rcuse/core": "^0.22.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.21.0",
+    "@antfu/ni": "^0.21.12",
+    "@chromatic-com/storybook": "^1.5.0",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@eslint-react/eslint-plugin": "^1.5.15",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.7",
+    "@storybook/addon-essentials": "^8.1.10",
+    "@storybook/addon-interactions": "^8.1.10",
+    "@storybook/addon-links": "^8.1.10",
+    "@storybook/addon-onboarding": "^8.1.10",
+    "@storybook/blocks": "^8.1.10",
+    "@storybook/manager-api": "^8.1.10",
+    "@storybook/react": "^8.1.10",
+    "@storybook/react-vite": "^8.1.10",
+    "@storybook/test": "^8.1.10",
+    "@storybook/theming": "^8.1.10",
+    "@testing-library/cypress": "^10.0.2",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@total-typescript/ts-reset": "^0.5.1",
+    "@types/gulp": "^4.0.17",
+    "@types/gulp-clean-css": "^4.3.4",
+    "@types/gulp-postcss": "^8.0.6",
+    "@types/gulp-rename": "^2.0.6",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitest/ui": "^1.6.0",
+    "autoprefixer": "^10.4.19",
+    "chalk": "^5.3.0",
+    "cross-env": "^7.0.3",
+    "cross-spawn": "^7.0.3",
+    "cypress": "^13.11.0",
+    "cypress-real-events": "^1.12.0",
+    "cypress-vite": "^1.5.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-cypress": "^3.3.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "eslint-plugin-storybook": "^0.8.0",
+    "execa": "^9.2.0",
+    "fast-glob": "^3.3.2",
+    "husky": "^9.0.11",
+    "jsdom": "^24.1.0",
+    "less": "^4.2.0",
+    "lint-staged": "^15.2.5",
+    "ora": "^8.0.1",
+    "pnpm": "^8.15.8",
+    "postcss": "^8.4.38",
+    "postcss-html": "^1.7.0",
+    "postcss-less": "^6.0.0",
+    "postcss-pxtorem": "^6.1.0",
+    "prettier": "^3.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^5.0.7",
+    "rollup": "^4.18.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "rollup-plugin-preserve-directives": "^0.4.0",
+    "storybook": "^8.1.10",
+    "stylelint": "^16.6.1",
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-prettier": "^5.0.0",
+    "taze": "^0.13.8",
+    "tsx": "^4.15.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.0",
+    "vite-plugin-style-import": "^2.0.0",
+    "vitest": "^1.6.0",
+    "walrus": "workspace:*",
+    "zx": "^8.1.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --cache --fix"
+    ]
+  }
+}
