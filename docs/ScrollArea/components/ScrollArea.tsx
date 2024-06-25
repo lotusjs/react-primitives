@@ -1,7 +1,7 @@
 import * as React from 'react';
+import * as ScrollAreaPrimitive from '@primitives/scroll-area';
 import { cn } from '../../utils';
 import { ScrollBar } from './ScrollBar';
-import * as ScrollAreaPrimitive from '@/scroll-area';
 
 export const ScrollArea = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>,

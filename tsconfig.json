@@ -3,9 +3,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@": ["src"],
-      "@/*": ["src/*"]
+      "@primitives": ["packages/primitives/src"],
+      "@primitives/*": ["packages/primitives/src/*"]
     }
   },
-  "include": ["src", "docs", "scripts"]
+  "include": ["packages", "docs", "scripts"]
 }
