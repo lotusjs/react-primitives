@@ -6,7 +6,6 @@
     "build": "storybook build"
   },
   "dependencies": {
-    "@mui/material": "^5.15.20",
     "@rcuse/core": "^0.22.0",
     "clsx": "^2.1.1"
   },

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Select } from '@mui/material';
-import MenuItem from '@mui/material/MenuItem';
-import InputLabel from '@mui/material/InputLabel';
+import { Select } from '@arco-design/web-react';
 import { Copy } from './components/Copy';
 import { ScrollArea } from './components/ScrollArea';
 
@@ -23,13 +21,7 @@ export function Basic() {
         >
           <label>
             type:
-            <InputLabel id="demo-simple-select-standard-label">Age</InputLabel>
-            <Select name="type">
-              <MenuItem value="always">always</MenuItem>
-              <MenuItem value="auto">auto</MenuItem>
-              <MenuItem value="scroll">scroll</MenuItem>
-              <MenuItem value="hover">hover</MenuItem>
-            </Select>
+            <Select options={['always', 'auto', 'scroll', 'hover']} />
           </label>
           {' '}
           <label>
