@@ -2,8 +2,8 @@ import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   stories: [
-    '../stories/**/*.mdx',
-    '../stories/**/*.stories.@(ts|tsx)',
+    '../docs/**/*.mdx',
+    '../docs/**/*.stories.@(ts|tsx)',
   ],
   addons: [
     '@storybook/addon-onboarding',

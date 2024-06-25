@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import * as ScrollArea from '../src/scroll-area';
+import { Copy } from './components/Copy';
+import { ScrollArea } from './components/ScrollArea';
 
 export default { title: 'Components/ScrollArea' };
 
@@ -47,44 +48,17 @@ export function Basic() {
         </form>
       </div>
 
-      <ScrollAreaStory
+      <ScrollArea
         {...props}
         key={props.type}
+        type="always"
         style={{ width: 800, height: 800, margin: '30px auto' }}
       >
         {Array.from({ length: 30 }).map((_, index) => (
+          // eslint-disable-next-line react/no-array-index-key
           <Copy key={index} />
         ))}
-      </ScrollAreaStory>
+      </ScrollArea>
     </>
-  );
-}
-
-function ScrollAreaStory({
-  children,
-  animated = false,
-  vertical = true,
-  horizontal = true,
-  ...props
-}: any) {
-  return (
-    <ScrollArea.Root
-      {...props}
-      className={scrollAreaClass()}
-      style={{ width: 200, height: 200, ...props.style }}
-    >
-      <ScrollArea.Viewport className={scrollAreaViewportClass()}>{children}</ScrollArea.Viewport>
-      {vertical && (
-        <ScrollArea.Scrollbar className={scrollbarClass()} orientation="vertical">
-          <ScrollArea.Thumb className={animated ? animatedThumbClass() : thumbClass()} />
-        </ScrollArea.Scrollbar>
-      )}
-      {horizontal && (
-        <ScrollArea.Scrollbar className={scrollbarClass()} orientation="horizontal">
-          <ScrollArea.Thumb className={animated ? animatedThumbClass() : thumbClass()} />
-        </ScrollArea.Scrollbar>
-      )}
-      <ScrollArea.Corner className={cornerClass()} />
-    </ScrollArea.Root>
   );
 }
