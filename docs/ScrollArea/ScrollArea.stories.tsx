@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Select } from '@mui/material';
+import MenuItem from '@mui/material/MenuItem';
+import InputLabel from '@mui/material/InputLabel';
 import { Copy } from './components/Copy';
 import { ScrollArea } from './components/ScrollArea';
 
@@ -20,14 +23,13 @@ export function Basic() {
         >
           <label>
             type:
-            {' '}
-            <select name="type">
-              <option></option>
-              <option>always</option>
-              <option>auto</option>
-              <option>scroll</option>
-              <option>hover</option>
-            </select>
+            <InputLabel id="demo-simple-select-standard-label">Age</InputLabel>
+            <Select name="type">
+              <MenuItem value="always">always</MenuItem>
+              <MenuItem value="auto">auto</MenuItem>
+              <MenuItem value="scroll">scroll</MenuItem>
+              <MenuItem value="hover">hover</MenuItem>
+            </Select>
           </label>
           {' '}
           <label>

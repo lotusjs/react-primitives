@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const pathResolve = (pathname: string) => resolve(__dirname, '.', pathname);
+const pathResolve = (pathname: string) => resolve(__dirname, '../../', pathname);
 
 export default defineConfig({
   resolve: {
@@ -15,12 +15,5 @@ export default defineConfig({
         replacement: `${pathResolve('src')}/`,
       },
     ],
-  },
-  css: {
-    preprocessorOptions: {
-      less: {
-        javascriptEnabled: true,
-      },
-    },
   },
 });
