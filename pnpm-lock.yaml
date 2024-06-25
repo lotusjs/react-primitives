@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@rcuse/core':
-        specifier: ^0.22.0
-        version: 0.22.0
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^2.21.0

@@ -1,26 +1,14 @@
 {
-  "name": "@lotus-design/react-primitives",
-  "version": "0.0.2-alpha.3",
+  "name": "@lotus-design/monorepo",
+  "private": true,
   "packageManager": "pnpm@8.15.8",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lotusjs/react-primitives.git"
-  },
-  "sideEffects": false,
-  "files": [
-    "README.md",
-    "es",
-    "lib",
-    "src"
-  ],
   "engines": {
     "node": "^18.0.0 || >=20.0.0"
   },
   "scripts": {
     "bootstrap": "pnpm install",
     "start": "pnpm sb",
-    "build:docs": "storybook build",
     "build": "walrus build",
     "sb": "pnpm --filter @lotus-design/storybook start",
     "build:sb": "pnpm --filter @lotus-design/storybook build",
@@ -34,23 +22,6 @@
     "reinstall": "rimraf pnpm-lock.yaml && rimraf package.lock.json && rimraf node_modules && npm run bootstrap",
     "preinstall": "npx only-allow pnpm",
     "major": "taze minor -wIr"
-  },
-  "peerDependencies": {
-    "@types/react": "*",
-    "@types/react-dom": "*",
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0"
-  },
-  "peerDependenciesMeta": {
-    "@types/react": {
-      "optional": true
-    },
-    "@types/react-dom": {
-      "optional": true
-    }
-  },
-  "dependencies": {
-    "@rcuse/core": "^0.22.0"
   },
   "publishConfig": {
     "access": "public"
