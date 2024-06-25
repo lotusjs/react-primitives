@@ -32,7 +32,6 @@ export function Basic() {
       <ScrollArea
         {...props}
         key={props.type}
-        type="always"
         style={{ width: 800, height: 800, margin: '30px auto' }}
       >
         {Array.from({ length: 30 }).map((_, index) => (
