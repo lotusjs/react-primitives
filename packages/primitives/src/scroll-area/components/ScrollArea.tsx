@@ -11,11 +11,13 @@ import type {
   ScrollAreaElement,
   ScrollAreaScrollbarElement,
   ScrollAreaViewportElement,
+  Scrollbars,
 } from '../types';
 
 export interface ScrollAreaProps extends PrimitiveDivProps {
   type?: ScrollAreaContextValue['type'];
   dir?: ScrollAreaContextValue['dir'];
+  scrollbars?: Scrollbars;
   scrollHideDelay?: number;
 }
 
@@ -25,6 +27,7 @@ export const ScrollArea = forwardRef<ScrollAreaElement, ScrollAreaProps>(
       __scopeScrollArea,
       type = 'hover',
       dir,
+      scrollbars = 'xy',
       scrollHideDelay = 600,
       ...scrollAreaProps
     } = props;
@@ -69,8 +72,8 @@ export const ScrollArea = forwardRef<ScrollAreaElement, ScrollAreaProps>(
           style={{
             position: 'relative',
             // Pass corner sizes as CSS vars to reduce re-renders of context consumers
-            ['--lotus-scroll-area-corner-width' as any]: `${cornerWidth}px`,
-            ['--lotus-scroll-area-corner-height' as any]: `${cornerHeight}px`,
+            ['--lotus-scroll-area-corner-width' as any]: scrollbars !== 'xy' ? '0px' : `${cornerWidth}px`,
+            ['--lotus-scroll-area-corner-height' as any]: scrollbars !== 'xy' ? '0px' : `${cornerHeight}px`,
             ...props.style,
           }}
         />

@@ -2,6 +2,7 @@ import type { Primitive } from '../primitive';
 import type { Scope } from '../context';
 
 export type Direction = 'ltr' | 'rtl';
+export type Scrollbars = 'x' | 'y' | 'xy' | false;
 export interface Sizes {
   content: number;
   viewport: number;
