@@ -19,6 +19,7 @@
     "lint": "eslint --cache .",
     "lint:fix": "nr lint --fix",
     "prepare": "husky || true",
+    "release": "pnpm --filter @lotus-design/react-primitives release",
     "reinstall": "rimraf pnpm-lock.yaml && rimraf package.lock.json && rimraf node_modules && npm run bootstrap",
     "preinstall": "npx only-allow pnpm",
     "major": "taze minor -wIr"
@@ -93,6 +94,5 @@
     "*.{ts,tsx}": [
       "eslint --cache --fix"
     ]
-  },
-  "version": "1.0.0-alpha.1"
+  }
 }

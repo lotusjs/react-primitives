@@ -14,7 +14,8 @@
     "src"
   ],
   "scripts": {
-    "build": "walrus build"
+    "build": "walrus build",
+    "release": "semantic-release"
   },
   "peerDependencies": {
     "@types/react": "*",
