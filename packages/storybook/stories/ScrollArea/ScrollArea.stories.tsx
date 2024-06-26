@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useScroll } from '@rcuse/core';
-import { Alert, Form, InputNumber, Select } from '@arco-design/web-react';
+import { Alert, Button, Form, InputNumber, Select, Space } from '@arco-design/web-react';
 import { cn } from '../utils';
 import { Copy } from './components/Copy';
 import { ScrollArea } from './components/ScrollArea';
@@ -63,7 +63,7 @@ export function DisableHorizontalScrollbars() {
   );
 }
 
-export function ScrollToPosition() {
+export function SubscribeScrollChanges() {
   const [scrollPosition, onScrollPositionChange] = useState({ x: 0, y: 0 });
   const ref = useRef<HTMLDivElement>(null);
   const scroll = useScroll(ref);
@@ -76,17 +76,41 @@ export function ScrollToPosition() {
       </div>
 
       <ScrollArea
-        viewportProps={{
-          ref,
-          onScroll: (e) => {
-            onScrollPositionChange({
-              x: e.currentTarget.scrollLeft,
-              y: e.currentTarget.scrollTop,
-            });
-          },
-        }}
+        viewportRef={ref}
+        onScrollPositionChange={onScrollPositionChange}
         className={cn('m-2', 'mx-auto', 'w-[48rem]', 'h-[48rem]')}
       >
+        {Array.from({ length: 30 }).map((_, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <Copy key={index} />
+        ))}
+      </ScrollArea>
+    </>
+  );
+}
+
+export function ScrollToPosition() {
+  const viewport = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () =>
+    viewport.current!.scrollTo({ top: viewport.current!.scrollHeight, behavior: 'smooth' });
+
+  const scrollToCenter = () =>
+    viewport.current!.scrollTo({ top: viewport.current!.scrollHeight / 2, behavior: 'smooth' });
+
+  const scrollToTop = () => viewport.current!.scrollTo({ top: 0, behavior: 'smooth' });
+
+  return (
+    <>
+      <div className={cn('m-2', 'mx-auto', 'text-center')}>
+        <Space>
+          <Button onClick={scrollToBottom}>Scroll to bottom</Button>
+          <Button onClick={scrollToCenter}>Scroll to center</Button>
+          <Button onClick={scrollToTop}>Scroll to top</Button>
+        </Space>
+      </div>
+
+      <ScrollArea className={cn('m-2', 'mx-auto', 'w-[36rem]', 'h-[36rem]')} viewportRef={viewport}>
         {Array.from({ length: 30 }).map((_, index) => (
           // eslint-disable-next-line react/no-array-index-key
           <Copy key={index} />
