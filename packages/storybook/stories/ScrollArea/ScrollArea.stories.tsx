@@ -5,6 +5,7 @@ import { cn } from '../utils';
 import { Copy } from './components/Copy';
 import { ScrollArea } from './components/ScrollArea';
 import { Autosize } from './components/Autosize';
+import AutosizeExample from './example1';
 
 export default { title: 'Components/ScrollArea' };
 
@@ -145,5 +146,11 @@ export function AutoSize() {
         </ScrollArea>
       </Autosize>
     </>
+  );
+}
+
+export function AutoSizeExample() {
+  return (
+    <AutosizeExample />
   );
 }
