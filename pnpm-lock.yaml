@@ -195,8 +195,8 @@ importers:
   packages/primitives:
     dependencies:
       '@rcuse/core':
-        specifier: ^0.22.0
-        version: 0.22.0
+        specifier: ^0.24.0
+        version: 0.24.0
       '@types/react':
         specifier: '*'
         version: 18.3.3
@@ -213,8 +213,8 @@ importers:
   packages/storybook:
     dependencies:
       '@rcuse/core':
-        specifier: ^0.22.0
-        version: 0.22.0
+        specifier: ^0.24.0
+        version: 0.24.0
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -3189,14 +3189,14 @@ packages:
       react: 18.3.1
     dev: true
 
-  /@rcuse/core@0.22.0:
-    resolution: {integrity: sha512-Ouf7sGbR5ZMuY2P3nZE6f7b/yfV2kyyyb6UdtdU1QKtsnUzOcFEMfqPODMesmnafTB1LMrsn+j3jjw2pb9Xftw==}
+  /@rcuse/core@0.24.0:
+    resolution: {integrity: sha512-D2ySX2Tdy5jeeZkW90zFDHOSkZ7ceCEPiXgbAfpCdKOcnOreUAfMcs/vBgWw8UiuD7Hn4Om2EB8oLyg+2uk6bw==}
     dependencies:
-      '@rcuse/shared': 0.22.0
+      '@rcuse/shared': 0.24.0
     dev: false
 
-  /@rcuse/shared@0.22.0:
-    resolution: {integrity: sha512-qr5DMhMG1Rlf5kMrlU/4e8bZiWGRRo64cZcGieDRxMaJSfo09tUr6UxWuTYDFGqW7jnJYV2fFtqkNIvCy7X7TA==}
+  /@rcuse/shared@0.24.0:
+    resolution: {integrity: sha512-koTxm75Dbn3s/HVNjHioxOf743UXlsG3LsEth9BjxN1Lpp6TMLXYnV5x+bt/QMVYVvoVzA13STnCHQWALpD7nA==}
     dependencies:
       radash: 12.1.0
       type-fest: 4.20.1

@@ -32,7 +32,7 @@
     }
   },
   "dependencies": {
-    "@rcuse/core": "^0.22.0"
+    "@rcuse/core": "^0.24.0"
   },
   "publishConfig": {
     "access": "public"
