@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as ScrollAreaPrimitive from '@primitives/scroll-area';
+import * as ScrollAreaPrimitive from '@lotus-design/react-primitives/scroll-area';
 import { cn } from '../../utils';
 import { ScrollBar } from './ScrollBar';
 

@@ -7,13 +7,11 @@ const __dirname = dirname(__filename);
 
 const pathResolve = (pathname: string) => resolve(__dirname, '.', pathname);
 
-console.log(pathResolve('../../packages/primitives/src'));
-
 export default defineConfig({
   resolve: {
     alias: [
       {
-        find: /@primitives\//,
+        find: /@lotus-design\/react-primitives\//,
         replacement: `${pathResolve('../../packages/primitives/src')}/`,
       },
     ],

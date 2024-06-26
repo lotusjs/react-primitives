@@ -3,8 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@primitives": ["packages/primitives/src"],
-      "@primitives/*": ["packages/primitives/src/*"]
+      "@lotus-design/react-primitives": ["packages/primitives/src"],
+      "@lotus-design/react-primitives/*": ["packages/primitives/src/*"]
     }
   },
   "include": ["packages", "scripts"]
