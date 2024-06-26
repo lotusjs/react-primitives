@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
-import { useScroll } from '@rcuse/core';
+import { useCounter, useScroll } from '@rcuse/core';
 import { Alert, Button, Form, InputNumber, Select, Space } from '@arco-design/web-react';
 import { cn } from '../utils';
 import { Copy } from './components/Copy';
 import { ScrollArea } from './components/ScrollArea';
+import { Autosize } from './components/Autosize';
 
 export default { title: 'Components/ScrollArea' };
 
@@ -116,6 +117,33 @@ export function ScrollToPosition() {
           <Copy key={index} />
         ))}
       </ScrollArea>
+    </>
+  );
+}
+
+export function AutoSize() {
+  const [count, handlers] = useCounter(3, { min: 0, max: 10 });
+
+  return (
+    <>
+      <div className={cn('m-2', 'mx-auto', 'text-center')}>
+        <Space>
+          <Button onClick={() => { handlers.decrement(); }}>Remove paragraph</Button>
+          <Button onClick={() => { handlers.increment(); }}>Add paragraph</Button>
+        </Space>
+      </div>
+      <Autosize>
+        <ScrollArea
+          type="always"
+          className={cn('m-2', 'mx-auto', 'w-96', 'max-h-96')}
+          scrollbars="y"
+        >
+          {Array.from({ length: count }).map((_, index) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <Copy key={index} />
+          ))}
+        </ScrollArea>
+      </Autosize>
     </>
   );
 }
