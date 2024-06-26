@@ -3,17 +3,21 @@ import * as ScrollAreaPrimitive from '@primitives/scroll-area';
 import { cn } from '../../utils';
 import { ScrollBar } from './ScrollBar';
 
+export interface ScrollAreaProps extends React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root> {
+  viewportProps?: React.ComponentProps<typeof ScrollAreaPrimitive.Viewport>;
+}
+
 export const ScrollArea = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
->(({ className, scrollbars = 'xy', children, ...props }, ref) => (
+  ScrollAreaProps
+>(({ className, scrollbars = 'xy', viewportProps, children, ...props }, ref) => (
   <ScrollAreaPrimitive.Root
     ref={ref}
     scrollbars={scrollbars}
     className={cn('relative overflow-hidden', className)}
     {...props}
   >
-    <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
+    <ScrollAreaPrimitive.Viewport {...viewportProps} className={cn('h-full w-full rounded-[inherit]', viewportProps?.className)}>
       {children}
     </ScrollAreaPrimitive.Viewport>
 
