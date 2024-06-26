@@ -2,6 +2,15 @@
  * @type {import('semantic-release').GlobalConfig}
  */
 export default {
+  branches: [
+    '+([0-9])?(.{+([0-9]),x}).x',
+    'main',
+    'next',
+    'next-major',
+    { name: 'alpha', prerelease: true },
+    { name: 'beta', prerelease: true },
+    { name: 'rc', prerelease: true },
+  ],
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
