@@ -17,8 +17,8 @@ import type {
 export interface ScrollAreaProps extends PrimitiveDivProps {
   type?: ScrollAreaContextValue['type'];
   dir?: ScrollAreaContextValue['dir'];
+  scrollHideDelay?: ScrollAreaContextValue['scrollHideDelay'];
   scrollbars?: Scrollbars;
-  scrollHideDelay?: number;
 }
 
 export const ScrollArea = forwardRef<ScrollAreaElement, ScrollAreaProps>(

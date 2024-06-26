@@ -71,7 +71,7 @@ export interface ScrollAreaScrollbarAxisPrivateProps {
 };
 
 export interface ScrollAreaContextValue {
-  type: 'auto' | 'always' | 'scroll' | 'hover';
+  type: 'auto' | 'always' | 'scroll' | 'hover' | 'never';
   dir: Direction;
   scrollHideDelay: number;
   scrollArea: ScrollAreaElement | null;

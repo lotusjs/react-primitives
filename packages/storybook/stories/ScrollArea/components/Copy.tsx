@@ -1,14 +1,15 @@
 import React from 'react';
 
 interface CopyProps {
+  className?: string;
   style?: React.CSSProperties;
 }
 
 export function Copy(props: CopyProps) {
-  const { style } = props;
+  const { className, style } = props;
 
   return (
-    <p style={{ width: 4000, marginTop: 0, ...style }}>
+    <p style={{ width: 4000, marginTop: 0, ...style }} className={className}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet eros iaculis, bibendum
       tellus ac, lobortis odio. Aliquam bibendum elit est, in iaculis est commodo id. Donec pulvinar
       est libero. Proin consectetur pellentesque molestie. Fusce mi ante, ullamcorper eu ante finibus,

@@ -7,5 +7,5 @@
       "@primitives/*": ["packages/primitives/src/*"]
     }
   },
-  "include": ["packages", "docs", "scripts"]
+  "include": ["packages", "scripts"]
 }
