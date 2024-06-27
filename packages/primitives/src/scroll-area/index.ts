@@ -3,7 +3,6 @@ import { ScrollAreaViewport, type ScrollAreaViewportProps } from './components/S
 import { ScrollAreaScrollbar, type ScrollAreaScrollbarProps } from './components/ScrollAreaScrollbar';
 import { ScrollAreaThumb, type ScrollAreaThumbProps } from './components/ScrollAreaThumb';
 import { ScrollAreaCorner, type ScrollAreaCornerProps } from './components/ScrollAreaCorner';
-import { AutoHeight } from './components/AutoHeight';
 import { createScrollAreaContext, useScrollAreaContext } from './context';
 
 const Root = ScrollArea;
@@ -16,7 +15,6 @@ export {
   useScrollAreaContext,
   createScrollAreaContext,
   //
-  AutoHeight,
   ScrollArea,
   ScrollAreaViewport,
   ScrollAreaScrollbar,
