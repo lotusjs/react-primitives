@@ -83,9 +83,6 @@ importers:
       '@vitest/ui':
         specifier: ^1.6.0
         version: 1.6.0(vitest@1.6.0)
-      autoprefixer:
-        specifier: ^10.4.19
-        version: 10.4.19(postcss@8.4.38)
       chalk:
         specifier: ^5.3.0
         version: 5.3.0
@@ -143,9 +140,6 @@ importers:
       pnpm:
         specifier: ^8.15.8
         version: 8.15.8
-      postcss:
-        specifier: ^8.4.38
-        version: 8.4.38
       react:
         specifier: ^18.3.1
         version: 18.3.1
